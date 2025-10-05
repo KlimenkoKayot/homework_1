@@ -7,9 +7,9 @@ const (
 	Unhealthy
 )
 
-func NewAnimal(number int, name string, status HealthStatus, foodIntake int) *Animal {
+func NewAnimal(id int, name string, status HealthStatus, foodIntake int) *Animal {
 	return &Animal{
-		number:       number,
+		id:           id,
 		name:         name,
 		healthStatus: status,
 		foodIntake:   foodIntake,
@@ -17,7 +17,7 @@ func NewAnimal(number int, name string, status HealthStatus, foodIntake int) *An
 }
 
 type Animal struct {
-	number       int
+	id           int
 	name         string
 	healthStatus HealthStatus
 	foodIntake   int
@@ -27,12 +27,6 @@ func (a *Animal) Food() int {
 	return a.foodIntake
 }
 
-func (a *Animal) Number() int {
-	return a.number
-}
-
-func (a *Animal) SetHealthStatus(status HealthStatus) bool {
-	changed := a.healthStatus != status
-	a.healthStatus = status
-	return changed
+func (a *Animal) ID() int {
+	return a.id
 }

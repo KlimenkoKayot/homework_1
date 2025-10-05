@@ -7,20 +7,20 @@ const (
 	AMD
 )
 
-func NewComputer(number int, processor Processor) *Computer {
+func NewComputer(id int, processor Processor) *Computer {
 	return &Computer{
-		number:    number,
+		id:        id,
 		processor: processor,
 	}
 }
 
 type Computer struct {
-	number    int
+	id        int
 	processor Processor
 }
 
-func (c *Computer) Number() int {
-	return c.number
+func (c *Computer) ID() int {
+	return c.id
 }
 
 func (c *Computer) Processor() Processor {

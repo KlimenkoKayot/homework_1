@@ -5,5 +5,10 @@ type Alive interface {
 }
 
 type Inventory interface {
-	Number() int
+	ID() int
+}
+
+type Animal interface {
+	Alive
+	Inventory
 }

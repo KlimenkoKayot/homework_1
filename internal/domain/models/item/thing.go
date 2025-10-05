@@ -1,15 +1,15 @@
 package item
 
-func NewThing(number int) *Thing {
+func NewThing(id int) *Thing {
 	return &Thing{
-		number: number,
+		id: id,
 	}
 }
 
 type Thing struct {
-	number int
+	id int
 }
 
-func (t *Thing) Number() int {
-	return t.number
+func (t *Thing) ID() int {
+	return t.id
 }

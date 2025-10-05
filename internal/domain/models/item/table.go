@@ -7,20 +7,20 @@ const (
 	Wood
 )
 
-func NewTable(number int, material Material) *Table {
+func NewTable(id int, material Material) *Table {
 	return &Table{
-		number:   number,
+		id:       id,
 		material: material,
 	}
 }
 
 type Table struct {
-	number   int
+	id       int
 	material Material
 }
 
-func (t *Table) Number() int {
-	return t.number
+func (t *Table) ID() int {
+	return t.id
 }
 
 func (t *Table) Material() Material {
